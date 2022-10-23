@@ -1,0 +1,120 @@
+#special-dishes_container {
+    padding-top: 10px;
+    padding-bottom: 13px;
+}
+
+.special-dishes-title {
+    margin-bottom: 39px;
+}
+
+.dishes_container {
+    display: grid;
+    grid-template-areas: 
+    'img1 singleimg singleimg img3 singleimg2'
+    'img2 singleimg singleimg img4 singleimg2';
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 37px;
+    row-gap: 32px;
+    grid-auto-rows: 191px;
+}
+
+.dishes_container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dishes_container .img-3, .dishes_container .img-6 {
+    grid-column: span 2;
+}
+
+.dishes_container .img-3, .dishes_container .img-6 {
+    grid-row: span 2;
+}
+
+
+.dishes_container .img-6 {
+    grid-area: singleimg2;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.dishes_container .img-6 img {
+    flex: 1;
+}
+
+.dishes_container .input_conainer {
+    display: flex;
+    column-gap: 16px;
+}
+
+.dishes_container .input_conainer input {
+    flex: 2;
+}
+
+.dishes_container .input_conainer input, .dishes_container .input_conainer button {
+    outline: none;
+    background: none;
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    padding: 18px 15px;
+    font-family: 'Open Sans', Hebrew;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #D9D9D9;
+}
+
+@media screen and (max-width: 1300px) {
+    .dishes_container {
+        gap: 22px!important;
+        grid-auto-rows: 150px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .dishes_container {
+        gap: 10px!important;
+        grid-auto-rows: 150px;
+        /* grid-template-areas: 
+        'img1 img1 singleimg singleimg img3 img3'
+        'img2 img2 singleimg2 singleimg2 img4 img4'
+        'img5 img5 img5 img6 img6 img6';
+        grid-template-columns: repeat(3, 1fr); */
+    }
+
+    .dishes_container .img-3, .dishes_container .img-6 {
+        grid-column: auto;
+    }
+    
+    .dishes_container .img-3, .dishes_container .img-6 {
+        grid-row: auto;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .dishes_container {
+        grid-template-areas: none;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .dishes_container {
+        grid-template-areas: none;
+        grid-auto-rows: auto;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .dishes_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .dishes_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

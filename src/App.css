@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+button.hover-scale:hover {
+  transform: scale(1.1);
+  transition: .5s;
+}
+
+.sections_container {
+  padding: 0 70px;
+}
+
+.sections-title {
+  font-family: 'Open Sans', Hebrew;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 54px;
+  color: #EE652B;
+}
+
+
+@media screen and (max-width: 672px) {
+  .sections_container {
+    padding: 5px 30px!important;
+  }
+  .sections-title {
+    font-size: 32px!important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sections-title {
+    font-size: 24px!important;
+  }
+}
